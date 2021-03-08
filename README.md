@@ -120,6 +120,7 @@ URLs:
 $ cat privkey.pem
 
 -----BEGIN RSA PRIVATE KEY-----
+
 MIIJKQIBAAKCAgEAyR0g1tMVaqIcA374yEsMaaSqfcYNjP9cuCtdBh//2iR5IeMw
 UACwqWtMxB74bPA3ihaLj5R9HWM+irIERtlYU/nB+ZJbOnfWJtrVjJmpzczZYHa+
 xXWYnsI+3S8Rqm8U51kEvD0lQkGMq3psPxpuYlOuZ/ic8PlnVJYrznxiv9KjVkXC
@@ -169,7 +170,9 @@ JmGOloPABuam8c04QFhb2HnoBX+uNo3rLnYMQEMRTYoX/qmCMFzSDIXw8GEzCgsW
 p8XHK4HtwNcF91tbuJXZO8FluYmHyZ70AdEkrGEXtCaXgwZ/qXYFeP9dRCg6u1dc
 DWka7B2OEZsNuTuvqb5O807XsRQU78WIthocahPYgQVPtoXSc4+y2ZyPTma5Jmn
 CZAq2tqzxLYMNX7xwo4Mo6uM9D6pkBqJk/o0jQfD6AlHAIP3XlXzHTlz7p1g
+
 -----END RSA PRIVATE KEY-----
+
 $ cat pubkey.pem
 
 -----BEGIN PUBLIC KEY-----
@@ -186,9 +189,13 @@ VVs2LYTf6MTQUGSgZbnF6ALVXa1W7fvVhoswlTPty+Q4puBXqR8vPOZUMcEnmSGs
 l87JQzWbaiziypv+UL2VfxqzmCDPojVVf9uHijrWUGSxGYpb7bsS/EDYRGLuiWAi
 sbhQvOXeNRtC5PkBt8A8YuMCAwEAAQ==
 -----END PUBLIC KEY-----
+
 $ echo hola > myfile.txt
+
 $ sign myfile.txt privkey.pem > signature.pem
+
 $ cat signature.pem
+
 ---BEGIN SRO SIGNATURE---
 AV1jWwBZog1zcoqA4uYNRe2/pguYOuywCL2lMigJVvanUSDz3amAp+9Yx3fD8Ku
 puZWLObiMWhKKc3hvq7MxV5+dfcvNVKQVR6ScvKuIUcEvyf5nptNaroq3NYjwztz
@@ -202,6 +209,7 @@ MMka5kHuCL7/11m1wCIqRqtim+6S/EjZiw7ilX96Q2XPufrK61Jr0GjBvslH9Zec
 jTGKIhrLUgVPvjkKHtwW3hvDd12agPxTQDxbmumAE80TPFxShFCmWiRkOP6N5kQW
 h2cDNkzVWqso8vWDSDB20NXs/rGERP6JSf1MrNFZ7aQ=
 ---END SRO SIGNATURE---
+
 $ sign -v signature.pem myfile.txt pubkey.pem
 $
 
