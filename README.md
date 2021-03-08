@@ -200,7 +200,7 @@ paSHBSH68DGHNbTN/jklzc6GBQiDJXAHVbPA5UYU/xzxBgEY8Gmh+w2HPudYfrq/
 KnePQEZSJgegiETAcCyLCJuF+1X8a1xEpOwWG2wyt8h/53fPt1GSCvgDvxiNVZVN
 MMka5kHuCL7/11m1wCIqRqtim+6S/EjZiw7ilX96Q2XPufrK61Jr0GjBvslH9Zec
 jTGKIhrLUgVPvjkKHtwW3hvDd12agPxTQDxbmumAE80TPFxShFCmWiRkOP6N5kQW
-h2cDNkzVWqso8vWDSDB20NXs/rGERP6JSf1MrNFZ7aQ=
+h2cDNkzVWqso8vWDSDB20NXs/rGERP6JSf1MrNFZ7aQ=<br/>
 ---END SRO SIGNATURE---<br/>
 $ sign -v signature.pem myfile.txt pubkey.pem<br/>
 $
