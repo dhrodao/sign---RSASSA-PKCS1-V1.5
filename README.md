@@ -78,8 +78,7 @@ A la hora de verificar una firma, es necesario comprobar que el padding es corre
 La firma digital generada debe estar codificada en base64, comenzar con una línea de cabecera,
 y terminar con una línea final exactamente como en este ejemplo:
 
- ---BEGIN SRO SIGNATURE---
- 
+ ---BEGIN SRO SIGNATURE---<br/>
 AV1jWwBZog1zcoqA4uYNRe2/pguYOuywCL2lMigJVvanUSDz3amAp+9Yx3fD8Ku
 puZWLObiMWhKKc3hvq7MxV5+dfcvNVKQVR6ScvKuIUcEvyf5nptNaroq3NYjwztz
 g2iJfHMGiSG38XG/XVM6wJ9xSOjJVNykoknE2wJwf2/SJfOdBmAiZ9WD7GMIuWoJ
@@ -90,9 +89,8 @@ paSHBSH68DGHNbTN/jklzc6GBQiDJXAHVbPA5UYU/xzxBgEY8Gmh+w2HPudYfrq/
 KnePQEZSJgegiETAcCyLCJuF+1X8a1xEpOwWG2wyt8h/53fPt1GSCvgDvxiNVZVN
 MMka5kHuCL7/11m1wCIqRqtim+6S/EjZiw7ilX96Q2XPufrK61Jr0GjBvslH9Zec
 jTGKIhrLUgVPvjkKHtwW3hvDd12agPxTQDxbmumAE80TPFxShFCmWiRkOP6N5kQW
-h2cDNkzVWqso8vWDSDB20NXs/rGERP6JSf1MrNFZ7aQ=
-
----END SRO SIGNATURE---
+h2cDNkzVWqso8vWDSDB20NXs/rGERP6JSf1MrNFZ7aQ=<br/>
+---END SRO SIGNATURE---<br/>
 
 ## 3 IMP L E ME N TACI Ó N
 
@@ -119,10 +117,8 @@ URLs:
 
 ## 4 EJ E MP LO
 
-$ cat privkey.pem
-
------BEGIN RSA PRIVATE KEY-----
-
+$ cat privkey.pem<br/>
+-----BEGIN RSA PRIVATE KEY-----<br/>
 MIIJKQIBAAKCAgEAyR0g1tMVaqIcA374yEsMaaSqfcYNjP9cuCtdBh//2iR5IeMw
 UACwqWtMxB74bPA3ihaLj5R9HWM+irIERtlYU/nB+ZJbOnfWJtrVjJmpzczZYHa+
 xXWYnsI+3S8Rqm8U51kEvD0lQkGMq3psPxpuYlOuZ/ic8PlnVJYrznxiv9KjVkXC
@@ -171,14 +167,10 @@ gfMJJU3aDaO6uKzVjIdc2u4PnIJbP1661loN7chEZ0IjUaryoQ69GV2m+L6G2GqR
 JmGOloPABuam8c04QFhb2HnoBX+uNo3rLnYMQEMRTYoX/qmCMFzSDIXw8GEzCgsW
 p8XHK4HtwNcF91tbuJXZO8FluYmHyZ70AdEkrGEXtCaXgwZ/qXYFeP9dRCg6u1dc
 DWka7B2OEZsNuTuvqb5O807XsRQU78WIthocahPYgQVPtoXSc4+y2ZyPTma5Jmn
-CZAq2tqzxLYMNX7xwo4Mo6uM9D6pkBqJk/o0jQfD6AlHAIP3XlXzHTlz7p1g
-
------END RSA PRIVATE KEY-----
-
-$ cat pubkey.pem
-
------BEGIN PUBLIC KEY-----
-
+CZAq2tqzxLYMNX7xwo4Mo6uM9D6pkBqJk/o0jQfD6AlHAIP3XlXzHTlz7p1g<br/>
+-----END RSA PRIVATE KEY-----<br/>
+$ cat pubkey.pem<br/>
+-----BEGIN PUBLIC KEY-----<br/>
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAyR0g1tMVaqIcA374yEsM
 aaSqfcYNjP9cuCtdBh//2iR5IeMwUACwqWtMxB74bPA3ihaLj5R9HWM+irIERtlY
 U/nB+ZJbOnfWJtrVjJmpzczZYHa+xXWYnsI+3S8Rqm8U51kEvD0lQkGMq3psPxpu
@@ -190,17 +182,14 @@ TiWeSIJhfZZ9QIrOgAcnxebxbmo/ukQ/NVNi9uBjL8ugsRQjjBgTmYohNqrG85I+
 VVs2LYTf6MTQUGSgZbnF6ALVXa1W7fvVhoswlTPty+Q4puBXqR8vPOZUMcEnmSGs
 80YE41LXwBkeHMhgU5hOTZqp3eKXFI+9WCinH3yWkDhW7a2nY7Ehsvyyp3+o7XhV
 l87JQzWbaiziypv+UL2VfxqzmCDPojVVf9uHijrWUGSxGYpb7bsS/EDYRGLuiWAi
-sbhQvOXeNRtC5PkBt8A8YuMCAwEAAQ==
+sbhQvOXeNRtC5PkBt8A8YuMCAwEAAQ==<br/>
+-----END PUBLIC KEY-----<br/>
 
------END PUBLIC KEY-----
+$ echo hola > myfile.txt<br/>
+$ sign myfile.txt privkey.pem > signature.pem<br/>
+$ cat signature.pem<br/>
 
-$ echo hola > myfile.txt
-
-$ sign myfile.txt privkey.pem > signature.pem
-
-$ cat signature.pem
-
----BEGIN SRO SIGNATURE---
+---BEGIN SRO SIGNATURE---<br/>
 AV1jWwBZog1zcoqA4uYNRe2/pguYOuywCL2lMigJVvanUSDz3amAp+9Yx3fD8Ku
 puZWLObiMWhKKc3hvq7MxV5+dfcvNVKQVR6ScvKuIUcEvyf5nptNaroq3NYjwztz
 g2iJfHMGiSG38XG/XVM6wJ9xSOjJVNykoknE2wJwf2/SJfOdBmAiZ9WD7GMIuWoJ
@@ -212,9 +201,7 @@ KnePQEZSJgegiETAcCyLCJuF+1X8a1xEpOwWG2wyt8h/53fPt1GSCvgDvxiNVZVN
 MMka5kHuCL7/11m1wCIqRqtim+6S/EjZiw7ilX96Q2XPufrK61Jr0GjBvslH9Zec
 jTGKIhrLUgVPvjkKHtwW3hvDd12agPxTQDxbmumAE80TPFxShFCmWiRkOP6N5kQW
 h2cDNkzVWqso8vWDSDB20NXs/rGERP6JSf1MrNFZ7aQ=
-
----END SRO SIGNATURE---
-
-$ sign -v signature.pem myfile.txt pubkey.pem
+---END SRO SIGNATURE---<br/>
+$ sign -v signature.pem myfile.txt pubkey.pem<br/>
 $
 
