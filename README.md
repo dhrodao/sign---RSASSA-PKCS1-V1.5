@@ -79,6 +79,7 @@ La firma digital generada debe estar codificada en base64, comenzar con una lín
 y terminar con una línea final exactamente como en este ejemplo:
 
  ---BEGIN SRO SIGNATURE---
+ 
 AV1jWwBZog1zcoqA4uYNRe2/pguYOuywCL2lMigJVvanUSDz3amAp+9Yx3fD8Ku
 puZWLObiMWhKKc3hvq7MxV5+dfcvNVKQVR6ScvKuIUcEvyf5nptNaroq3NYjwztz
 g2iJfHMGiSG38XG/XVM6wJ9xSOjJVNykoknE2wJwf2/SJfOdBmAiZ9WD7GMIuWoJ
@@ -90,6 +91,7 @@ KnePQEZSJgegiETAcCyLCJuF+1X8a1xEpOwWG2wyt8h/53fPt1GSCvgDvxiNVZVN
 MMka5kHuCL7/11m1wCIqRqtim+6S/EjZiw7ilX96Q2XPufrK61Jr0GjBvslH9Zec
 jTGKIhrLUgVPvjkKHtwW3hvDd12agPxTQDxbmumAE80TPFxShFCmWiRkOP6N5kQW
 h2cDNkzVWqso8vWDSDB20NXs/rGERP6JSf1MrNFZ7aQ=
+
 ---END SRO SIGNATURE---
 
 ## 3 IMP L E ME N TACI Ó N
@@ -176,6 +178,7 @@ CZAq2tqzxLYMNX7xwo4Mo6uM9D6pkBqJk/o0jQfD6AlHAIP3XlXzHTlz7p1g
 $ cat pubkey.pem
 
 -----BEGIN PUBLIC KEY-----
+
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAyR0g1tMVaqIcA374yEsM
 aaSqfcYNjP9cuCtdBh//2iR5IeMwUACwqWtMxB74bPA3ihaLj5R9HWM+irIERtlY
 U/nB+ZJbOnfWJtrVjJmpzczZYHa+xXWYnsI+3S8Rqm8U51kEvD0lQkGMq3psPxpu
@@ -188,6 +191,7 @@ VVs2LYTf6MTQUGSgZbnF6ALVXa1W7fvVhoswlTPty+Q4puBXqR8vPOZUMcEnmSGs
 80YE41LXwBkeHMhgU5hOTZqp3eKXFI+9WCinH3yWkDhW7a2nY7Ehsvyyp3+o7XhV
 l87JQzWbaiziypv+UL2VfxqzmCDPojVVf9uHijrWUGSxGYpb7bsS/EDYRGLuiWAi
 sbhQvOXeNRtC5PkBt8A8YuMCAwEAAQ==
+
 -----END PUBLIC KEY-----
 
 $ echo hola > myfile.txt
@@ -208,6 +212,7 @@ KnePQEZSJgegiETAcCyLCJuF+1X8a1xEpOwWG2wyt8h/53fPt1GSCvgDvxiNVZVN
 MMka5kHuCL7/11m1wCIqRqtim+6S/EjZiw7ilX96Q2XPufrK61Jr0GjBvslH9Zec
 jTGKIhrLUgVPvjkKHtwW3hvDd12agPxTQDxbmumAE80TPFxShFCmWiRkOP6N5kQW
 h2cDNkzVWqso8vWDSDB20NXs/rGERP6JSf1MrNFZ7aQ=
+
 ---END SRO SIGNATURE---
 
 $ sign -v signature.pem myfile.txt pubkey.pem
